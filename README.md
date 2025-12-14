@@ -9,8 +9,8 @@ La identidad visual de Auto-Record está diseñada para transmitir control, conf
    <td>Logo del Proyeto</td>
    <td>Logo Empresarial</td>
   <tr>
-    <td>  <img src="./Imagenes/LogoProyecto.jpeg" width="80%" style="padding: 10px;" />  </td>
-    <td>   <img src="./Imagenes/LogoEmpresa.png" width="80%" style="padding: 10px;" /> </td>
+    <td>  <img src="./Documentacion/Imagenes/LogoProyecto.jpeg" width="80%" style="padding: 10px;" />  </td>
+    <td>   <img src="./Documentacion/Imagenes/LogoEmpresa.png" width="80%" style="padding: 10px;" /> </td>
    
   </tr>
  
@@ -22,8 +22,8 @@ La identidad visual de Auto-Record está diseñada para transmitir control, conf
 
 La paleta de colores de Auto-Récord ayudan a que el usuario perciba el sistema como confiable, serio y fácil de usar, reduciendo la fricción visual y favoreciendo la concentración en tareas operativas.
 
-![general_view](./Imagenes/Colores1.jpeg)
-![general_view](./Imagenes/Colores2.jpeg)
+![general_view](./Documentacion/Imagenes/Colores1.jpeg)
+![general_view](./Documentacion/Imagenes/Colores2.jpeg)
 
 ---
 
@@ -31,7 +31,7 @@ La paleta de colores de Auto-Récord ayudan a que el usuario perciba el sistema 
 
 La tipografía responde a decisiones estratégicas de diseño centradas en la identidad de marca, la legibilidad, la coherencia visual y la experiencia de usuario. 
 
-![general_view](./Imagenes/topgrafía.png)
+![general_view](./Documentacion/Imagenes/topgrafía.png)
 
 ---
 
@@ -66,7 +66,7 @@ Desarrollar una aplicación web que permita la administración, monitoreo y cont
 
 ## Organigrama 
 
-![general_view](./Imagenes/organigrama.PNG)
+![general_view](./Documentacion/Imagenes/organigrama.PNG)
 
 ---
 
@@ -83,8 +83,8 @@ Desarrollar una aplicación web que permita la administración, monitoreo y cont
 
 ## Diagram de Gantt 
 
-![general_view](./Imagenes/diagrama.jpg)
-![general_view](./Imagenes/gantt.jpg)
+![general_view](./Documentacion/Imagenes/diagrama.jpg)
+![general_view](./Documentacion/Imagenes/gantt.jpg)
 
 ---
 
@@ -139,8 +139,14 @@ Descripciones cortas de lo que el usuario necesita y por qué.
 
 Dibujos iniciales y rápidos que representan la idea básica de las pantallas sin enfocarse en detalles visuales. Ingresa a este link para visualizar todas las pantallas
 
-![general_view](./Imagenes/Sketches.PNG)
-![general_view](./Imagenes/Sketches2.PNG)
+![general_view](./Documentacion/Imagenes/Sketches/Inicio.png)
+![general_view](./Documentacion/Imagenes/Sketches/Funciones.png)
+![general_view](./Documentacion/Imagenes/Sketches/Descargas.png)
+![general_view](./Documentacion/Imagenes/Sketches/Informacion.png)
+![general_view](./Documentacion/Imagenes/Sketches/Nosotros.png)
+![general_view](./Documentacion/Imagenes/Sketches/Checador.png)
+![general_view](./Documentacion/Imagenes/Sketches/Chofer.png)
+
 
 ---
 
@@ -149,8 +155,13 @@ Dibujos iniciales y rápidos que representan la idea básica de las pantallas si
 Diagramas más estructurados que muestran cómo estarán organizados los elementos de cada pantalla, sirviendo como puente entre la idea y el diseño final. Ingresa a este link para visualizar todas las pantallas
 
 
-![general_view](./Imagenes/Wireframes.PNG)
-![general_view](./Imagenes/Wireframes2.PNG)
+![general_view](./Documentacion/Imagenes/Wireframes/Inicio.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Funciones.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Descargas.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Informacion.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Nosotros.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Checador.png)
+![general_view](./Documentacion/Imagenes/Wireframes/Chofer.png)
 
 ---
 
@@ -158,25 +169,19 @@ Diagramas más estructurados que muestran cómo estarán organizados los element
 
 Versiones más avanzadas y estéticas del diseño, donde ya se incluyen colores, tipografías, íconos e identidad gráfica del proyecto. Ingresa a este link para visualizar todas las pantallas
 
-![general_view](./Imagenes/Mockups.PNG)
-![general_view](./Imagenes/Mockups2.PNG)
+![general_view](./Documentacion/Imagenes/Mockups/Inicio.png)
+![general_view](./Documentacion/Imagenes/Mockups/Funciones.png)
+![general_view](./Documentacion/Imagenes/Mockups/Descargas.png)
+![general_view](./Documentacion/Imagenes/Mockups/Informacion.png)
+![general_view](./Documentacion/Imagenes/Mockups/Nosotros.png)
+![general_view](./Documentacion/Imagenes/Mockups/Checador.png)
+![general_view](./Documentacion/Imagenes/Mockups/Chofer.png)
 
 ---
 
 ## Prototipo Figma 
 
 Representación navegable e interactiva del sistema que permite simular su funcionamiento: https://www.figma.com/proto/p4c284763CrOIinXHfpl4l/Untitled--Copia---Copy-?node-id=4496-594&p=f&t=GPiawQBH4t2Qx3gh-0&scaling=min-zoom&content-scaling=fixed&page-id=4176%3A10657&starting-point-node-id=4496%3A594
-
----
-
-## Prototipo Programado 
-
-
----
-
-## Presentación 
-
-
 
 ---
 
