@@ -1,29 +1,12 @@
-<?php
-// Incluir conexión a la base de datos
-require_once 'dbconnection.php';
-
-// Obtener el total de descargas
-$total_descargas = 0;
-try {
-    $stmt = $pdo->query("SELECT COUNT(*) FROM descargas");
-    $total_descargas = $stmt->fetchColumn();
-} catch (Exception $e) {
-    error_log("Error al contar descargas: " . $e->getMessage());
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Auto-Record - Descargas</title>
     <link rel="icon" type="image/x-icon" href="Favicons/google.ico">
-    <link rel="stylesheet" href="assets/css/styles6.css">
+    <link rel="stylesheet" href="styles3.css">
 </head>
 <body>
-
-<?php include 'includes/header.php'; ?>
-
 <main>
     <section class="download-section">
         <div class="content-left">
@@ -51,7 +34,6 @@ try {
 
             <div class="downloads-total">
                 <h3>Descargas totales</h3>
-                <p><?php echo number_format($total_descargas); ?> descargas</p>
             </div>
         </div>
 
@@ -67,7 +49,7 @@ try {
             <div class="box">
                 <h2>¿Por qué elegir Auto-Record?</h2>
                 <ul>
-                    <li>• Más de <?php echo number_format($total_descargas); ?> descargas</li>
+                    <li>• Más descargas</li>
                     <li>• 95% de usuarios satisfechos</li>
                     <li>• +120 unidades administradas diariamente</li>
                     <li>• Reducción del 40% en errores comunes</li>
@@ -77,9 +59,6 @@ try {
         </div>
     </section>
 </main>
-
-<?php include 'includes/footer.php'; ?>
-
 <script>
 // Simular descarga con ícono animado
 document.querySelectorAll('.btn-download').forEach(btn => {

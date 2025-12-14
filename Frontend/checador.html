@@ -1,28 +1,20 @@
-<?php
-session_start();
-if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'checador') {
-    header("Location: login.php");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Auto-Record - Panel del Checador</title>
-    <link rel="icon" type="image/x-icon" href="Favicons/google.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+
 <!-- MENÚ SUPERIOR -->
 <header>
     <div class="logo-container">
         <img src="https://pbs.twimg.com/media/GK7DstZXwAApufZ.jpg" alt="Logo" class="logo-circle">
-        Auto-Record<span class="role-label">Checador</span>
+        Auto-Record
     </div>
     <nav>
-        <a>Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="Funciones.html">Funciones</a>
         <a href="Descargas.html">Descarga</a>
         <a href="Nosotros.html">Nosotros</a>
@@ -99,22 +91,39 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'checador') {
 	   <section class="drivers-section">
             <h2>Choferes Activos Hoy</h2>
             <table class="drivers-table">
-    <thead>...</thead>
-    <tbody>
-        <?php
-        $stmt = $pdo->query("SELECT * FROM choferes_activos");
-        while ($row = $stmt->fetch()):
-        ?>
-        <tr>
-            <td><?php echo htmlspecialchars($row['nombre']); ?></td>
-            <td><?php echo htmlspecialchars($row['ruta']); ?></td>
-            <td><?php echo $row['entrada'] ?: '-'; ?></td>
-            <td><?php echo $row['salida'] ?: '-'; ?></td>
-            <td><span class="status <?php echo $row['estado']; ?>"><?php echo $row['estado_texto']; ?></span></td>
-        </tr>
-        <?php endwhile; ?>
-    </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Ruta asignada</th>
+                    <th>Entrada</th>
+                    <th>Salida</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carlos Méndez</td>
+                    <td>Ruta 5 - Centro</td>
+                    <td>06:00</td>
+                    <td>-</td>
+                    <td><span class="status active">En ruta</span></td>
+                </tr>
+                <tr>
+                    <td>Ana Ramírez</td>
+                    <td>Ruta 3 - Sur</td>
+                    <td>06:15</td>
+                    <td>14:00</td>
+                    <td><span class="status finished">Finalizado</span></td>
+                </tr>
+                <tr>
+                    <td>José Gutiérrez</td>
+                    <td>Ruta 7 - Norte</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><span class="status pending">Sin registrar</span></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
             <button type="button" class="btn-secondary">Generar Reporte</button>
         </div>
@@ -123,10 +132,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'checador') {
         <a href="index.html" class="btn-outline">Cerrar sesión</a>
     </div>
 </main>
+
 <footer>
     TechHive Labs 2025 • Gestión inteligente de transporte público
 </footer>
-    <!-- Al final, antes de </body> -->
-    <script src="script.js"></script>
+
 </body>
 </html>
