@@ -22,8 +22,8 @@ La identidad visual de Auto-Record está diseñada para transmitir control, conf
 
 La paleta de colores de Auto-Récord ayudan a que el usuario perciba el sistema como confiable, serio y fácil de usar, reduciendo la fricción visual y favoreciendo la concentración en tareas operativas.
 
-![general_view](./imagenes/colores1.png)
-![general_view](./imagenes/colores2.png)
+![general_view](./Imagenes/Colores1.jpeg)
+![general_view](./Imagenes/Colores2.jpeg)
 
 ---
 
