@@ -1,24 +1,28 @@
+<?php
+// Incluir conexión a la base de datos
+require_once 'dbconnection.php';
+
+// Obtener el total de descargas
+$total_descargas = 0;
+try {
+    $stmt = $pdo->query("SELECT COUNT(*) FROM descargas");
+    $total_descargas = $stmt->fetchColumn();
+} catch (Exception $e) {
+    error_log("Error al contar descargas: " . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Auto-Record - Descargas</title>
     <link rel="icon" type="image/x-icon" href="Favicons/google.ico">
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="assets/css/styles6.css">
 </head>
 <body>
 
-<!-- Menú superior -->
-<header>
-    <div class="logo">Auto-Record</div>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Funciones.html">Funciones</a>
-        <a>Descargas</a>
-        <a href="Nosotros.html">Nosotros</a>
-        <a href="informacion.html">Información</a>
-    </nav>
-</header>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <section class="download-section">
@@ -28,7 +32,7 @@
             <p>Úsala tanto en dispositivos de escritorio como en dispositivos móviles.</p>
 
             <div class="download-buttons">
-                <a href="#" class="btn-download desktop">
+                <a href="#" class="btn-download desktop" data-tipo="escritorio">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                         <path d="M8 21h8"></path>
@@ -36,7 +40,7 @@
                     </svg>
                     Descarga para escritorio
                 </a>
-                <a href="#" class="btn-download mobile">
+                <a href="#" class="btn-download mobile" data-tipo="movil">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                         <line x1="12" y1="18" x2="12" y2="18"></line>
@@ -47,7 +51,7 @@
 
             <div class="downloads-total">
                 <h3>Descargas totales</h3>
-                <p>1000 descargas totales</p>
+                <p><?php echo number_format($total_descargas); ?> descargas</p>
             </div>
         </div>
 
@@ -60,11 +64,10 @@
                     <li><span>📋</span> Generación de reportes de mantenimiento</li>
                 </ul>
             </div>
-
             <div class="box">
-                <h2>¿Por qué elegir Auto Record?</h2>
+                <h2>¿Por qué elegir Auto-Record?</h2>
                 <ul>
-                    <li>• Más de 1000 descargas</li>
+                    <li>• Más de <?php echo number_format($total_descargas); ?> descargas</li>
                     <li>• 95% de usuarios satisfechos</li>
                     <li>• +120 unidades administradas diariamente</li>
                     <li>• Reducción del 40% en errores comunes</li>
@@ -75,10 +78,36 @@
     </section>
 </main>
 
-<footer>
-    TechHive Labs 2025 • Gestión inteligente de transporte público
-</footer>
-    <!-- Al final, antes de </body> -->
-    <script src="script2.js"></script>
+<?php include 'includes/footer.php'; ?>
+
+<script>
+// Simular descarga con ícono animado
+document.querySelectorAll('.btn-download').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const tipo = this.dataset.tipo;
+
+        // Enviar solicitud para registrar la descarga
+        fetch('registrar_descarga.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ tipo: tipo })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Mostrar ícono de "instalación"
+                alert("✅ ¡La descarga ha comenzado!\n\nInstalando Auto-Record...");
+                // Aquí podrías mostrar un ícono animado (ej. con un GIF o animación CSS)
+                location.reload(); // Recargar para actualizar el contador
+            }
+        })
+        .catch(err => {
+            alert("⚠️ Error al iniciar la descarga. Inténtalo más tarde.");
+        });
+    });
+});
+</script>
+
 </body>
 </html>

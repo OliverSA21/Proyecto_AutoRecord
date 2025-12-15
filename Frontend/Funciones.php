@@ -19,7 +19,7 @@
         <a href="informacion.html">Información</a>
     </nav>
 </header>
-
+<?php include 'includes/header.php'; ?>
 <main>
     <section class="hero">
         <h1>Funciones</h1>
@@ -67,7 +67,7 @@
         </div>
     </section>
 </main>
-
+<?php include 'includes/footer.php'; ?>
 <footer>
     TechHive Labs 2025 • Gestión inteligente de transporte público
 </footer>

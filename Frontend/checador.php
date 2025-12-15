@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'checador') {
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <?php include 'includes/header.php'; ?>
 <!-- MENÚ SUPERIOR -->
 <header>
     <div class="logo-container">
@@ -92,39 +99,22 @@
 	   <section class="drivers-section">
             <h2>Choferes Activos Hoy</h2>
             <table class="drivers-table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Ruta asignada</th>
-                    <th>Entrada</th>
-                    <th>Salida</th>
-                    <th>Estado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Oliver Sanchez</td>
-                    <td>Ruta 5 - Centro</td>
-                    <td>06:00</td>
-                    <td>-</td>
-                    <td><span class="status active">En ruta</span></td>
-                </tr>
-                <tr>
-                    <td>Erick Uriel</td>
-                    <td>Ruta 5 - Centro</td>
-                    <td>06:30</td>
-                    <td>07:00</td>
-                    <td><span class="status finished">Finalizado</span></td>
-                </tr>
-                <tr>
-                    <td>Aranza Garrido</td>
-                    <td>Ruta 5 - Centro</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><span class="status pending">Sin registrar</span></td>
-                </tr>
-            </tbody>
-        </table>
+    <thead>...</thead>
+    <tbody>
+        <?php
+        $stmt = $pdo->query("SELECT * FROM choferes_activos");
+        while ($row = $stmt->fetch()):
+        ?>
+        <tr>
+            <td><?php echo htmlspecialchars($row['nombre']); ?></td>
+            <td><?php echo htmlspecialchars($row['ruta']); ?></td>
+            <td><?php echo $row['entrada'] ?: '-'; ?></td>
+            <td><?php echo $row['salida'] ?: '-'; ?></td>
+            <td><span class="status <?php echo $row['estado']; ?>"><?php echo $row['estado_texto']; ?></span></td>
+        </tr>
+        <?php endwhile; ?>
+    </tbody>
+    </table>
     </section>
             <button type="button" class="btn-secondary">Generar Reporte</button>
         </div>

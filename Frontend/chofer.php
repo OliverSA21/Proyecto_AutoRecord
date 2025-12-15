@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'chofer') {
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +14,7 @@
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-
+    <?php include 'includes/header.php'; ?>
 <!-- MENÚ SUPERIOR -->
 <header>
     <div class="logo-container">

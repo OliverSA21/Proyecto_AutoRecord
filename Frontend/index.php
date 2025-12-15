@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles5.css">
 </head>
 <body>
-
+    
 <!-- MENÚ SUPERIOR -->
 <header>
     <div class="logo-container">
@@ -22,6 +22,8 @@
         <a href="informacion.html">Información</a>
     </nav>
 </header>
+
+<?php include 'includes/header.php'; ?>
 
 <main>
     <h1>Bienvenido a Auto-Record</h1>
@@ -47,7 +49,7 @@
         ¿No tienes cuenta? Comunícate con tu Administrador para darte de alta en el sistema.
     </p>
 </main>
-
+    <?php include 'includes/footer.php'; ?>
 <footer>
     TechHive Labs 2025 • Gestión inteligente de transporte público
 </footer>

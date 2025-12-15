@@ -18,7 +18,7 @@
         <a href="informacion.html">Información</a>
     </nav>
 </header>
-
+<?php include 'includes/header.php'; ?>
 <main>
     <section class="about-section">
         <div class="content-left">
@@ -81,7 +81,7 @@
         </div>
     </section>
 </main>
-
+<?php include 'includes/footer.php'; ?>
 <footer>
     TechHive Labs 2025 • Gestión inteligente de transporte público
 </footer>
