@@ -1,0 +1,187 @@
+/* ===== RESET Y VARIABLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3b82f6; /* Azul principal */
+    --primary-light: #dbeafe; /* Azul claro para fondos */
+    --primary-dark: #2563eb; /* Azul oscuro para hover */
+    --dark: #1e293b; /* Texto oscuro */
+    --gray: #64748b; /* Texto secundario */
+    --white: #ffffff;
+    --light-gray: #f8fafc; /* Fondo general */
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    --footer-bg: #3b82f6; /* Fondo footer */
+    --footer-text: #ffffff; /* Texto footer */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #e0f2fe; /* Fondo azul claro como en la imagen 2 */
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--dark);
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 2.2em;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+main h2 {
+    text-align: center;
+    margin: 30px 0 20px;
+    color: var(--dark);
+}
+
+/* ===== TARJETAS DE ROLES ===== */
+.role-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.role-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 1.3em;
+}
+
+.role-card p {
+    margin-bottom: 16px;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.footer-note {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 0.95em;
+}
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+    .logo-container {
+        font-size: 1.2em;
+    }
+    .logo-circle {
+        width: 32px;
+        height: 32px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 4px 8px;
+    }
+    main {
+        padding: 0 16px;
+    }
+    .role-card {
+        padding: 20px;
+    }
+}
