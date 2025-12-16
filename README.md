@@ -9,8 +9,8 @@ La identidad visual de Auto-Record está diseñada para transmitir control, conf
    <td>Logo del Proyeto</td>
    <td>Logo Empresarial</td>
   <tr>
-    <td>  <img src="./Imagenes/LogoProyecto.jpeg" width="80%" style="padding: 10px;" />  </td>
-    <td>   <img src="./Imagenes/LogoEmpresa.png" width="80%" style="padding: 10px;" /> </td>
+    <td>  <img src="./Documentacion/Imagenes/LogoProyecto.jpeg" width="80%" style="padding: 10px;" />  </td>
+    <td>   <img src="./Documentacion/Imagenes/LogoEmpresa.png" width="80%" style="padding: 10px;" /> </td>
    
   </tr>
  
